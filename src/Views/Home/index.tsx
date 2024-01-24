@@ -38,7 +38,7 @@ const Home = () => {
 				}))
 				setData(prev => ({ ...prev, clientsData: parsedData }))
 			})
-		axios.get('https://api.escuelajs.co/api/v1/products', { params: { limit: 4, offset: 61 } }).then(response => {
+		axios.get('https://api.escuelajs.co/api/v1/products', { params: { limit: 10, offset: 0 } }).then(response => {
 			const parsedData: IProduct[] = response.data.map((product: { title: string; price: number; id: number }) => ({
 				name: product.title,
 				price: product.price,
